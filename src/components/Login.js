@@ -61,6 +61,7 @@ function Login() {
                     
                     sessionStorage.setItem("id", id);
                     sessionStorage.setItem("userName", userName);
+                    sessionStorage.setItem("hasroll", false);
                     window.location.href = "/mainhome"
                     console.log(userName)
                 } else {

@@ -5,7 +5,7 @@ export default function Home(){
   
     return (
       <div className="App">
-        <h4>사이트 이름</h4>
+        <h4>Image Teller</h4>
         <p>사이트 소개</p>
         <PublicUp></PublicUp>
         

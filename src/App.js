@@ -14,7 +14,7 @@ function App() {
           <Routes>
             <Route path = "/" element={<Home/>}/>
             <Route path = "/login" element={<Login/>}/>
-            <Route path = "/roll" element={<Roll/>}/>
+            <Route path = "/roll/:idx" element={<Roll/>}/>
             <Route path = "/sign" element={<Signup/>}/>
             <Route path = "/all" element={<All/>}/>
             <Route path = "/like" element={<Like/>}/>

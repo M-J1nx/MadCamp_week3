@@ -1,5 +1,8 @@
-export default function Roll() {
+import { useState, useEffect } from 'react';
 
+export default function Roll() {
+  
+  //nickname이 고정이 안됨.
   const nickname = sessionStorage.getItem("userName")
     return (
       <div style={{marginLeft:"20px"}}>
@@ -15,7 +18,7 @@ export default function Roll() {
         <button>결과 만들기</button> {/* 이거가 요약 해주는 버튼... */}
         <button>메모 쓰기</button>
         <div>
-          <button>저장?</button>
+          <button>아무거나</button>
           <button>공유?</button>
         </div>
         
