@@ -22,15 +22,22 @@ function Signup() {
   
         <p><input className="btn" type="submit" value="회원가입" onClick={() => {
           {/* 통신 부분.... */}
+          {/* 이거도 db에 아이디 있는지 확인하고 토스트 해야 함... 로그인이랑 반대...*/}
           axios.post("http://143.248.225.204:3001/signup", {
                 userId: id,
                 userPw: password,
                 userName: nickname
             })
             .then(function (response) {
+
                 const {message} = response.data;
-                console.log("200", message);
-                window.location.href = "/login"
+                if (message == 'true') {
+                  console.log("200", message);
+                  window.location.href = "/login"
+                } else {
+                  console.log("200", message);
+                }
+                
             }).catch(function (error) {
                 console.log(error);
             })

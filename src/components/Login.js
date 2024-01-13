@@ -50,20 +50,25 @@ function Login() {
         <p><input className="btn" type="submit" value="로그인" onClick={() => {
           {/* 통신 부분... */}
           {/* 밑에 이동하는 코드는 로그인이 성공했을 때만 이동하게 나중에 수정해야 함... */}
+          {/* 비번 틀리면 토스트 하는 거?  */}
             axios.post("http://143.248.225.204:3001/login", {
                 userId: id,
                 userPw: password
             })
             .then(function (response) {
-                const {message} = response.data;
-                console.log("200", message);
-                window.location.href = "/mainhome"
+                const {message, userName} = response.data;
+                if (message == 'true') {
+                    
+                    sessionStorage.setItem("id", id);
+                    sessionStorage.setItem("userName", userName);
+                    window.location.href = "/mainhome"
+                    console.log(userName)
+                } else {
+                    console.log("아이디/비번이 다릅니다.")
+                }
             }).catch(function (error) {
                 console.log(error);
             })
-
-            {/* 서버의 응답에 따라 로그인 성공 여부 결정하는 거 해야 함...*/}
-            {/* handleLogin();*/}
             
             }} /></p>
       </div>

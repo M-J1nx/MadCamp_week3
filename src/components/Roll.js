@@ -1,12 +1,10 @@
 export default function Roll() {
+
+  const nickname = sessionStorage.getItem("userName")
     return (
-      <div>
+      <div style={{marginLeft:"20px"}}>
         <div>
-          <h2>롤링페이퍼?</h2>
-          <a href="/" onClick={()=>{
-            console.log("로그아웃 기능?");
-          }}>로그아웃</a>
-          {/* 이거 로그아웃 했을 때도 통신 필요... */}
+          <h2>{nickname}의 롤링페이퍼</h2>
         </div>
         
         <p>
@@ -15,6 +13,7 @@ export default function Roll() {
           뭔가 분석
         </p>
         <button>결과 만들기</button> {/* 이거가 요약 해주는 버튼... */}
+        <button>메모 쓰기</button>
         <div>
           <button>저장?</button>
           <button>공유?</button>
