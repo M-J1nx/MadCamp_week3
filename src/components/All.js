@@ -31,13 +31,3 @@ export default function All() {
     );
   }
 
-
-  /*
-  axios.get('http://143.248.225.204:3001/all')
-          .then(function (response) {
-            console.log(response.data);
-          })
-          .catch(function (error) {
-            console.log(error);
-          })
-  */
