@@ -10,7 +10,7 @@ export default function Mainhome() {
           <button onClick={()=>{window.location.href = "/all"}}>전체 게시판</button>
           <button onClick={()=>{window.location.href = "/like"}}>좋아요 게시판</button>
           <button onClick={()=>{
-            {/*axios.post("http://143.248.225.204:3001/Roll", {
+            axios.post("http://43.202.79.6:3001/Roll", {
                 userId: id
             })
             .then(function (response) {
@@ -19,8 +19,8 @@ export default function Mainhome() {
                 window.location.href = `/roll/${paperId}`
             }).catch(function (error) {
                 console.log(error);
-            })*/}
-            window.location.href = "/roll/1"
+            })
+            {/* window.location.href = "/roll/1" */}
             }}>나의 롤링페이퍼 만들기</button>
         </div>
     );

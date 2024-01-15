@@ -23,7 +23,7 @@ function Signup() {
         <p><input className="btn" type="submit" value="회원가입" onClick={() => {
           {/* 통신 부분.... */}
           {/* 이거도 db에 아이디 있는지 확인하고 토스트 해야 함... 로그인이랑 반대...*/}
-          axios.post("http://143.248.225.204:3001/signup", {
+          axios.post("http://43.202.79.6:3001/signup", {
                 userId: id,
                 userPw: password,
                 userName: nickname

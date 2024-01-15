@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import { useState } from "react"
 import { AuthProvider, useAuth } from './AuthContext';
-import { Login, Signup, PublicUp, All, Home, Like, Roll, Mainhome, Memo } from './components';
+import { Login, Signup, PublicUp, All, Home, Like, Roll, Mainhome, Memo, WriteMemo } from './components';
 
 
 
@@ -20,6 +20,7 @@ function App() {
             <Route path = "/like" element={<Like/>}/>
             <Route path = "/mainhome" element={<Mainhome/>}/>
             <Route path = "/memo" element={<Memo/>}/>
+            <Route path = "/roll/post/:idx" element={<WriteMemo/>}/>
           </Routes>
         </div>
       </AuthProvider>

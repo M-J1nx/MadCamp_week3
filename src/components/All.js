@@ -8,13 +8,13 @@ import React, {useEffect, useState} from 'react';
 export default function All() {
   const [lst, setlst] = useState([]);
   const getlst = async () => {
-    const res = await (await axios.get('http://143.248.225.204:3001/all')).data;
+    const res = await (await axios.get('http://43.202.79.6:3001/all')).data;
     setlst(res)
   }
 
   useEffect(() => {
     getlst();
-  }, []);
+  });
     return (
       
       <div>

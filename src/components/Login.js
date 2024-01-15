@@ -51,7 +51,7 @@ function Login() {
           {/* 통신 부분... */}
           {/* 밑에 이동하는 코드는 로그인이 성공했을 때만 이동하게 나중에 수정해야 함... */}
           {/* 비번 틀리면 토스트 하는 거?  */}
-            axios.post("http://143.248.225.204:3001/login", {
+            axios.post("http://43.202.79.6:3001/login", {
                 userId: id,
                 userPw: password
             })
