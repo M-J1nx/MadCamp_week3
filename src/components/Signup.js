@@ -23,7 +23,7 @@ function Signup() {
             setPassword2(event.target.value);
           }} /></p>
 
-          <p><button className="btn" onClick={() => {
+          <p><button style={{marginRight: "12px"}}className="btn" onClick={() => {
             {/* 통신 부분.... */}
             {/* 이거도 db에 아이디 있는지 확인하고 토스트 해야 함... 로그인이랑 반대...*/}
             axios.post("http://43.202.79.6:3001/signup", {
@@ -44,12 +44,13 @@ function Signup() {
               }).catch(function (error) {
                   console.log(error);
               })
-          }} >회원가입</button></p>
-        </div>
-
-        <p>로그인화면으로 돌아가기  <button onClick={() => {
+          }} >회원가입</button>
+          <button className="btn" onClick={() => {
           window.location.href = "/login"
         }}>로그인 화면</button></p>
+        </div>
+
+        
       </div>
       
     </div> );

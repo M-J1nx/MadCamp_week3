@@ -49,7 +49,7 @@ function Login() {
               setPassword(event.target.value);
             }} /></p>
 
-            <p><input type="submit" value="로그인" onClick={() => {
+            <p><button style={{marginRight: "12px"}} className="btn" onClick={() => {
               {/* 통신 부분... */}
               {/* 밑에 이동하는 코드는 로그인이 성공했을 때만 이동하게 나중에 수정해야 함... */}
               {/* 비번 틀리면 토스트 하는 거?  */}
@@ -73,13 +73,14 @@ function Login() {
                     console.log(error);
                 })
                 
-                }} /></p>
+                }}>로그인</button>
+                <button style={{marginRight: "12px"}} className="btn" onClick={() => {
+            window.location.href = "/sign"
+          }}>계정 만들기</button>
+          <button style={{marginRight: "12px"}} className="btn" onClick={()=>{window.location.href="/"}}>홈 화면 가기</button></p>
           </div>
 
-          <p>계정이 없으신가요?  <button onClick={() => {
-            window.location.href = "/sign"
-          }}>회원가입</button></p>
-          <button onClick={()=>{window.location.href="/"}}>홈 화면 가기</button>
+          
         </div>
       
     </div> 

@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import React, {useEffect, useState} from 'react';
+import './Memo.css';
 
-//get으로 paperID 받아서 이걸로 게시물들 눌렀을 때 각자의 롤페 페이지로 이동.
-//useEffect가 컴포넌트로 넘어왔을 때 실행되는 건데, 이걸로 papaerID 받아오는 거 하면 될 듯.
+//get할 때 닉네임도 받아와서 게시물 이름에 닉네임이 들어가게 하도록 수정해야할 듯.
 
 export default function All() {
   const [lst, setlst] = useState([]);
@@ -17,16 +17,17 @@ export default function All() {
   });
     return (
       
-      <div>
-        
-        전체 게시판입니다. <br/>
-        더미 데이터로 게시판 만들어보기...
-        {lst.map((paper)=>(
-          <li key={paper.paperId}>
-            <Link to={`/roll/${paper.paperId}`}>게시물들{paper.paperId}</Link>
-          </li>
-        ))}
-
+      <div className='login'>
+        <div className='bulletin'>
+          <h1>전체 게시판</h1>
+          <div style = {{width: "50vw", height: "75vh", border: "1px solid #eadcd7", padding: "20px", backgroundColor: "#eadcd7"}}>
+            {lst.map((paper)=>(
+              <li style={{marginBottom: "10px", borderBottom: "1px solid black"}}key={paper.paperId}>
+                <Link to={`/roll/${paper.paperId}`} style={{ textDecoration: "none", color: "black"}}>게시물들{paper.paperId}</Link>
+              </li>
+            ))}
+          </div>
+        </div>
       </div>
     );
   }
