@@ -17,3 +17,114 @@
     margin-top: 3%;
     margin-bottom: 50px;
 }
+
+.home1 {
+    background-image: url('./1.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 56.25%;
+    
+
+}
+
+.home2 {
+    background-image: url('./2.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 56.25%;
+    
+
+}
+
+.home3 {
+    background-image: url('./3.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 56.25%;
+    
+
+}
+
+.home4 {
+    position: relative;
+    background-image: url('./4.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 56.25%;
+
+    
+
+}
+
+.login {
+    position: relative;
+    background-image: url('./5.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 56.25%;
+
+    
+
+}
+
+.btndesign {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 35%;
+
+    background-color:#eadcd7;
+	border-radius:28px;
+	border:1px solid #eadcd7;
+	display:inline-block;
+	cursor:pointer;
+	color: black;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #eadcd7;
+    
+}
+
+.loginitem {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inputbar {
+    width: 40vw;
+    height: 6vh;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+  }
+
+
+  .btn {
+    background-color:#eadcd7;
+	border-radius:28px;
+	border:1px solid #eadcd7;
+	display:inline-block;
+	cursor:pointer;
+	color: black;
+	font-family:Arial;
+	font-size:17px;
+	padding:1vw 2vw;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #eadcd7;
+  }

@@ -1,14 +1,19 @@
 import PublicUp from "./PublicUp"
+import './Memo.css';
 
 
 export default function Home(){
   
     return (
-      <div className="App">
-        <h4>Image Teller</h4>
-        <p>사이트 소개</p>
-        <PublicUp></PublicUp>
+      <>
+        <div className="home1" />
+        <div className="home2"/>
+        <div className="home3"/>
+        <div className="home4">
+          <button className="btndesign" onClick={() => { window.location.href = "/login" }}>로그인</button>
+        </div>
         
-      </div>
+      </>
+      
     )
   }

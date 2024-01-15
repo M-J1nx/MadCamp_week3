@@ -3,6 +3,7 @@ import Memo from './Memo';
 import './Memo.css'
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
+import WriteMemo from './WriteMemo';
 
 export default function Roll() {
   const {idx} = useParams();//이거가 인덱스(paperid 가져오는 거...)
@@ -26,11 +27,24 @@ export default function Roll() {
   //
   //롤페 메모지는 반응형인데 사진은 어케함..?
   
+  
   const [nickname, setnickname] = useState("")
+
   useEffect(() => {
-    const storednickname = sessionStorage.getItem("userName")
-    setnickname(storednickname)
-  },[])
+    console.log(idx)
+    axios.get(`http://43.202.79.6:3001/getname?paperId=${idx}`)
+    .then(function (response) {
+      const {userName} = response.data[0]
+      console.log(userName)
+      setnickname(userName)
+    })
+    .catch(function (error) {
+      console.log(error)
+    })  
+    },[]);
+
+  const [ispopup, setispopup] = useState(false)
+
     return (
       <div style={{marginLeft:"20px"}}>
         <div>
@@ -46,36 +60,24 @@ export default function Roll() {
 
         <div className='wrapper grid'>
           {lst.map((post)=>(
-            <Memo postTitle = {post.userId} postDetail = {post.body} />
+            <Memo postTitle = {post.userName} postDetail = {post.body} />
           ))}
         </div>
 
         <button>결과 만들기</button> {/* 이거가 요약 해주는 버튼... */}
         <button onClick={()=>{
-          {/*axios.post("http://43.202.79.6:3001/post", {
-                userId: sessionStorage.getItem("id"),
-                paperId: idx 
-            })
-            .then(function (response) {
-                const {postId} = response.data;
-                window.location.href = `/roll/post/${postId}`
-            }).catch(function (error) {
-                console.log(error);
-            })*/}
 
-          window.location.href = "/roll/post/1"
+          setispopup(true)
 
         }}>메모 쓰기</button>
+        <WriteMemo isOpen={ispopup} onClose={()=>setispopup(false)} paperId={idx}/>
+
         {/* 메모 쓰기 했을 때 롤페처럼 서버랑 연결해서 인덱스 만들기
         여기서 롤페 내용 적기... textarea 
         다 적으면 서버에 또 저장... 
         이거를 위에 lst 대신에 서버에서 메모지 받아오는 걸로 바꾸기...*/}
         
 
-        <div style={{marginBottom: '20px'}}>
-          <button>아무거나</button>
-          <button>공유?</button>
-        </div>
         
       </div>
     );

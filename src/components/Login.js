@@ -3,6 +3,7 @@ import { useAuth } from '../AuthContext';
 import { useNavigate } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import axios from 'axios';
+import './Memo.css';
 
 function Login() {
     const [id, setId] = useState("");
@@ -36,50 +37,52 @@ function Login() {
     
     
     return (
-      <>
-      <h2>로그인</h2>
+      <div className="login">
+        <div className="loginitem">
+          <h2 >로그인</h2>
   
-      <div>
-        <p><input className="login" type="text" name="username" placeholder="아이디" onChange={event => {
-          setId(event.target.value);
-        }} /></p>
-        <p><input className="login" type="password" name="pwd" placeholder="비밀번호" onChange={event => {
-          setPassword(event.target.value);
-        }} /></p>
-  
-        <p><input className="btn" type="submit" value="로그인" onClick={() => {
-          {/* 통신 부분... */}
-          {/* 밑에 이동하는 코드는 로그인이 성공했을 때만 이동하게 나중에 수정해야 함... */}
-          {/* 비번 틀리면 토스트 하는 거?  */}
-            axios.post("http://43.202.79.6:3001/login", {
-                userId: id,
-                userPw: password
-            })
-            .then(function (response) {
-                const {message, userName} = response.data;
-                if (message == 'true') {
-                    
-                    sessionStorage.setItem("id", id);
-                    sessionStorage.setItem("userName", userName);
-                    sessionStorage.setItem("hasroll", false);
-                    window.location.href = "/mainhome"
-                    console.log(userName)
-                } else {
-                    console.log("아이디/비번이 다릅니다.")
-                }
-            }).catch(function (error) {
-                console.log(error);
-            })
-            
+          <div>
+            <p><input className="inputbar" type="text" name="username" placeholder="아이디" onChange={event => {
+              setId(event.target.value);
             }} /></p>
-      </div>
-  
-      <p>계정이 없으신가요?  <button onClick={() => {
-        window.location.href = "/sign"
-      }}>회원가입</button></p>
-      <button onClick={()=>{window.location.href="/"}}>홈 화면 가기</button>
+            <p><input className="inputbar" type="password" name="pwd" placeholder="비밀번호" onChange={event => {
+              setPassword(event.target.value);
+            }} /></p>
+
+            <p><input type="submit" value="로그인" onClick={() => {
+              {/* 통신 부분... */}
+              {/* 밑에 이동하는 코드는 로그인이 성공했을 때만 이동하게 나중에 수정해야 함... */}
+              {/* 비번 틀리면 토스트 하는 거?  */}
+                axios.post("http://43.202.79.6:3001/login", {
+                    userId: id,
+                    userPw: password
+                })
+                .then(function (response) {
+                    const {message, userName} = response.data;
+                    if (message == 'true') {
+                        
+                        sessionStorage.setItem("id", id);
+                        sessionStorage.setItem("userName", userName);
+                        sessionStorage.setItem("hasroll", false);
+                        window.location.href = "/mainhome"
+                        console.log(userName)
+                    } else {
+                        console.log("아이디/비번이 다릅니다.")
+                    }
+                }).catch(function (error) {
+                    console.log(error);
+                })
+                
+                }} /></p>
+          </div>
+
+          <p>계정이 없으신가요?  <button onClick={() => {
+            window.location.href = "/sign"
+          }}>회원가입</button></p>
+          <button onClick={()=>{window.location.href="/"}}>홈 화면 가기</button>
+        </div>
       
-    </> 
+    </div> 
     )
   }
 
