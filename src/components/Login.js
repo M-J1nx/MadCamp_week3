@@ -1,9 +1,11 @@
-import { useState } from "react"
 import { useAuth } from '../AuthContext';
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Memo.css';
+import { ToastMessage } from "./ToastMessage";
+
+
 
 function Login() {
     const [id, setId] = useState("");
@@ -34,11 +36,24 @@ function Login() {
         }
     }, [user]);
 
+
+    const [downloadToast, setDownloadToast] = useState(false);
+    function activeToast() {
+      setDownloadToast(true);
+      let timer = setTimeout(() => {
+        setDownloadToast(false);
+      }, 2000);
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+
     
     
     return (
       <div className="login">
         <div className="loginitem">
+        {downloadToast && <ToastMessage text={"아이디/비번이 다릅니다."} />}
           <h2 >로그인</h2>
   
           <div>
@@ -67,7 +82,8 @@ function Login() {
                         window.location.href = "/mainhome"
                         console.log(userName)
                     } else {
-                        console.log("아이디/비번이 다릅니다.")
+                        activeToast()
+                        
                     }
                 }).catch(function (error) {
                     console.log(error);

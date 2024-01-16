@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import { useState } from "react"
 import { AuthProvider, useAuth } from './AuthContext';
-import { Login, Signup, PublicUp, All, Home, Like, Roll, Mainhome, Memo, WriteMemo } from './components';
+import { Login, Signup, PublicUp, All, Home, Like, Roll, Mainhome, Memo, WriteMemo, Result } from './components';
 
 
 
@@ -21,6 +21,7 @@ function App() {
             <Route path = "/mainhome" element={<Mainhome/>}/>
             <Route path = "/memo" element={<Memo/>}/>
             <Route path = "/roll/post/:idx" element={<WriteMemo/>}/>
+            <Route path = "/roll/:idx/result" element={<Result/>}/>
           </Routes>
         </div>
       </AuthProvider>

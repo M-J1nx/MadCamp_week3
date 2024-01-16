@@ -22,11 +22,14 @@ export default function All() {
           <h1>전체 게시판</h1>
           <div style = {{width: "50vw", height: "75vh", border: "1px solid #eadcd7", padding: "20px", backgroundColor: "#eadcd7"}}>
             {lst.map((paper)=>(
-              <li style={{marginBottom: "10px", borderBottom: "1px solid black"}}key={paper.paperId}>
-                <Link to={`/roll/${paper.paperId}`} style={{ textDecoration: "none", color: "black"}}>게시물들{paper.paperId}</Link>
+              <li style={{marginBottom: "10px", borderBottom: "1px solid black"}} key={paper.paperId}>
+                <Link to={`/roll/${paper.paperId}`} style={{ textDecoration: "none", color: "black"}}>{paper.paperId}: {paper.userName}의 게시물</Link>
               </li>
             ))}
+
+            
           </div>
+          
         </div>
       </div>
     );

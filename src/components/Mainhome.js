@@ -46,7 +46,7 @@ export default function Mainhome() {
         <div className='login'>
             <div className='loginitem'>
                 <button style={{marginRight: "12px"}} className='btn' onClick={()=>{window.location.href = "/all"}}>전체 게시판</button>
-                <button style={{marginRight: "12px"}} className='btn' onClick={()=>{window.location.href = "/like"}}>좋아요 게시판</button>
+                {/*<button style={{marginRight: "12px"}} className='btn' onClick={()=>{window.location.href = "/like"}}>좋아요 게시판</button>*/}
                 <button className='btn' onClick={hasRoll ? () => {window.location.href=`/roll/${pid}`} : handleRoll}>
                     {hasRoll ? "롤링페이퍼 보기" : "나의 롤링페이퍼 만들기"}
                 </button>

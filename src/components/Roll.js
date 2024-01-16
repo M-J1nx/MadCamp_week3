@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import Memo from './Memo';
 import './Memo.css'
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import WriteMemo from './WriteMemo';
 
+
+
 export default function Roll() {
   const {idx} = useParams();//이거가 인덱스(paperid 가져오는 거...)
-  //이거는 서버에서 메모지 정보 가져오는 걸로 바꿔야 함..
-  //타이틀은 메모 적은 사람 닉네임, 내용은 그냥 내용 가져오기...
-  //get 함수로 가져와야 할 듯.
+  const navigate = useNavigate();
+  
   const [lst, setlst] = useState([]);
   const getlst = async () => {
     const res = await (await axios.get(`http://43.202.79.6:3001/getpost?paperId=${idx}`)).data;
@@ -19,14 +20,6 @@ export default function Roll() {
   useEffect(() => {
     getlst();
   });
-  
-  
-  //nickname이 고정이 안됨.
-  //서버에서 받아와야 할 듯?
-  //paperid 있으니까...
-  //
-  //롤페 메모지는 반응형인데 사진은 어케함..?
-  
   
   const [nickname, setnickname] = useState("")
 
@@ -45,40 +38,69 @@ export default function Roll() {
 
   const [ispopup, setispopup] = useState(false)
 
+  const [postData, setPostData] = useState('');
+
+  const handleGetData = async () => {
+    try {
+      const response = await axios.get(`http://43.202.79.6:3001/result?paperId=${idx}`);
+      const extractedBodies = response.data.map(item => item.body);
+      const finalBody = extractedBodies.join('\n');
+      
+      setPostData(finalBody);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+/////////////////////////////////////////////////내용 부족하거나 이상하면 에러남. api 서버에서.
+  useEffect(()=>{
+    if (postData != ''){
+      console.log(postData)
+      handlesum()
+      
+      
+    }
+    
+  }, [postData])
+
+  const handlesum = async () => {
+    try {
+      const response = await axios.post("http://43.202.79.6:3001/api", {result: postData})
+      const jsonString = JSON.stringify(response.data.summary);
+      const finalresult = jsonString.slice(1, -1);
+      
+      navigate(`/roll/${idx}/result`, {state: {rst: finalresult, nick: nickname}})
+
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+
+
     return (
-      <div style={{marginLeft:"20px"}}>
+      <div className='roll'>
         <div>
-          <h2>{nickname}의 롤링페이퍼</h2>
+          <div style={{padding: "20px", textAlign: "center"}}>
+            <h2 style={{marginTop: 0}}>{nickname}의 롤링페이퍼</h2>
+          </div>
+          <div style={{marginLeft: "10vw", marginRight: "10vw",paddingRight: "20px"}} className='wrapper grid'>
+            {lst.map((post)=>(
+            <Memo postTitle = {post.userName} postDetail = {post.body} postId = {post.postId} />
+            ))}
+          </div>
+
+          <div style={{textAlign: "center"}}>
+            <button style={{marginBottom: "20px", marginRight: "10px"}} className='btn' onClick={()=>{
+              handleGetData()
+              
+              
+            }}>결과 보기</button> {/* 이거가 요약 해주는 버튼... */}
+            <button style={{marginBottom: "20px", marginRight: "10px"}} className='btn' onClick={()=>{setispopup(true)}}>메모 쓰기</button>
+            <button className='btn' onClick={()=>{window.location.href="/mainhome"}}>메인으로 돌아가기</button>
+            <WriteMemo isOpen={ispopup} onClose={()=>setispopup(false)} paperId={idx}/>
+            
+
+          </div>
         </div>
-        
-        <p>
-          나의 롤링페이퍼를 만드는 곳. <br/>
-          뭔가 사람들이 메모 붙이는 동작<br/>
-          뭔가 분석
-        </p>
-        
-
-        <div className='wrapper grid'>
-          {lst.map((post)=>(
-            <Memo postTitle = {post.userName} postDetail = {post.body} />
-          ))}
-        </div>
-
-        <button>결과 만들기</button> {/* 이거가 요약 해주는 버튼... */}
-        <button onClick={()=>{
-
-          setispopup(true)
-
-        }}>메모 쓰기</button>
-        <WriteMemo isOpen={ispopup} onClose={()=>setispopup(false)} paperId={idx}/>
-
-        {/* 메모 쓰기 했을 때 롤페처럼 서버랑 연결해서 인덱스 만들기
-        여기서 롤페 내용 적기... textarea 
-        다 적으면 서버에 또 저장... 
-        이거를 위에 lst 대신에 서버에서 메모지 받아오는 걸로 바꾸기...*/}
-        
-
-        
       </div>
     );
   }

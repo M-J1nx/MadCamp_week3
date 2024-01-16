@@ -1,11 +1,22 @@
 import { useState } from "react"
 import axios from 'axios'
 import './Memo.css';
+import { ToastMessage } from "./ToastMessage";
 
 function Signup() {
     const [id, setId] = useState("");
     const [password, setPassword] = useState("");
     const [nickname, setPassword2] = useState("");
+    const [downloadToast, setDownloadToast] = useState(false);
+    function activeToast() {
+      setDownloadToast(true);
+      let timer = setTimeout(() => {
+        setDownloadToast(false);
+      }, 2000);
+      return () => {
+        clearTimeout(timer);
+      };
+    }
   
     return (
     <div className="login">
@@ -39,6 +50,7 @@ function Signup() {
                     window.location.href = "/login"
                   } else {
                     console.log("200", message);
+                    activeToast();
                   }
                   
               }).catch(function (error) {
@@ -49,6 +61,7 @@ function Signup() {
           window.location.href = "/login"
         }}>로그인 화면</button></p>
         </div>
+        {downloadToast && <ToastMessage text={"이미 존재하는 아이디입니다."} />}
 
         
       </div>
