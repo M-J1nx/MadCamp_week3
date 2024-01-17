@@ -1,0 +1,302 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@font-face {
+    font-family: 'SOGANGUNIVERSITYTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SOGANGUNIVERSITYTTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PuradakGentleGothicR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.memo {
+    
+    width: 200px;
+    height: 200px;
+    background-image: url('./post.png');
+    background-size: cover;
+    padding: 35px;
+    font-family: "SOGANGUNIVERSITYTTF";
+    font-weight: 50;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.memo h2 {
+    margin: 0;
+}
+
+.grid {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    margin-bottom: 50px;
+}
+
+.home1 {
+    background-image: url('./img/1.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 56.25%;
+    
+
+}
+
+.home2 {
+    background-image: url('./img/2.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 56.25%;
+    
+
+}
+
+.home3 {
+    background-image: url('./img/3.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 56.25%;
+    
+
+}
+
+.home4 {
+    position: relative;
+    background-image: url('./img/4.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.login {
+    position: relative;
+    background-image: url('./img/5.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.roll {
+    position: relative;
+    background-image: url('./img/RollingPaper.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    /*height: 100% auto;*/
+    
+}
+
+.btndesign {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25%;
+
+    background-color:#eadcd7;
+	border-radius:28px;
+	border:1px solid #eadcd7;
+	display:inline-block;
+	cursor:pointer;
+	color: black;
+	font-family:Arial;
+	font-size:1.2vw;
+	padding:1vw 2vw;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #eadcd7;
+}
+
+.loginitem {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+}
+
+.mainHomeItem {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25%;
+}
+
+.MainButton {
+    position: relative;
+    background-image: url('./img/MainButton.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.entireBtn {
+    position: absolute;
+    left: 34.3%;
+    transform: translateX(-50%);
+    bottom: 37%;
+    background-color:rgba(255, 255, 255, 0);
+	border-radius:28px;
+	border:1px solid #eadcd7;
+	display:inline-block;
+	cursor:pointer;
+	color: white;
+	font-family:Arial;
+	font-size:1.2vw;
+	padding:1vw 2vw;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #eadcd7;
+}
+
+.rollBtn {
+    position: absolute;
+    right: 15.5%;
+    transform: translateX(-50%);
+    bottom: 37%;
+    background-color:rgba(255, 255, 255, 0);
+	border-radius:28px;
+	border:1px solid #eadcd7;
+	display:inline-block;
+	cursor:pointer;
+	color: white;
+	font-family:Arial;
+	font-size:1.2vw;
+	padding:1vw 2vw;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #eadcd7;
+}
+
+.bulletin {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title {
+    padding: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.inputbar {
+    width: 40vw;
+    height: 6vh;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+  }
+
+
+  .btn {
+    background-color:#eadcd7;
+	border-radius:28px;
+	border:1px solid #eadcd7;
+	display:inline-block;
+	cursor:pointer;
+	color: black;
+	font-family:Arial;
+	font-size:1.2vw;
+	padding:1vw 2vw;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #eadcd7;
+  }
+
+  .memobtn {
+    background-color:#f0d9b0;
+	border-radius:28px;
+	border:1px solid #f0d9b0;
+	display:inline-block;
+	cursor:pointer;
+	color: black;
+	font-family:Arial;
+	padding: 0.5vw 1vw;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #eadcd7;
+  }
+
+  .whitebtn {
+    background-color:rgba(255, 255, 255, 0);
+	border-radius:28px;
+	border:1px solid #eadcd7;
+	display:inline-block;
+	cursor:pointer;
+	color: white;
+	font-family:Arial;
+	font-size:1.2vw;
+	padding:1vw 2vw;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #eadcd7;
+  }
+
+  .resultItem {
+    position: relative;
+    background-image: url('./img/ResultBackground.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    width: 100%;
+    padding-bottom: 56.25%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toast_container {
+    position: fixed;
+    z-index: 99;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 24rem;
+    height: 2.625rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 var(--black-40);
+    background-color: #eadcd7;
+  }
+  
+  .toast_text {
+    font-weight: bold;
+    letter-spacing: 0.29px;
+    text-align: center;
+    margin-top: 0.6rem;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+  .txt {
+    font-family: "Arial";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+  }
+
+.LoginBox {
+    display: flex;
+}

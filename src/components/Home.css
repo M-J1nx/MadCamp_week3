@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+body {
+    background-color: #DDCFC3;
+    margin: 0; /* Body의 기본 margin 제거 */
+    padding: 0; /* Body의 기본 padding 제거 */
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 40px;
+    background-color:#80746a;
+}
+
+.MainBanner {
+    background-image: url('./img/MainBanner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vw;
+}
+
+.Main {
+    display: flex;
+    height: calc(100vh - 40px);
+}
+
+.Main > div {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.LeftBar {
+    background-color: #998A7E;
+    flex: 1;
+}
+
+.Content {
+    flex: 8; 
+    display: flex;
+    flex-direction: column;
+}
+
+.WhatsYourImage {
+    background-image: url('./img/WhatsYourImage.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-size: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 10%;
+}
+
+.Description1 {
+    background-image: url('./img/Descr1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.Description2 {
+    background-image: url('./img/Descr2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-top: 30px;
+    width: 100%;
+    height: 10%;
+}
+
+.RightBar {
+    background-color: #998A7E;
+    flex: 1;
+}
