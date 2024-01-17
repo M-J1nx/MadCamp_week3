@@ -53,6 +53,8 @@ MadCamp Week3 1분반
 
 ## Page 2 - BULLETIN
 
+<img width="961" alt="chrome_Z33VLSh1yI" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/d7794950-e148-4450-a149-a79312ee256e">
+
 ***Major features***
 
 - 사용자들이 만든 롤링 페이퍼들로 이동할 수 있습니다.
@@ -100,30 +102,40 @@ MadCamp Week3 1분반
  ┃ ┗ 📜robots.txt
 📦src
  ┣ 📂components
- ┃ ┣ 📜1.png 
+ ┃ ┣ 📂img #배경 이미지들
+ ┃ ┃ ┣ 📜1.png
+ ┃ ┃ ┣ 📜2.png
+ ┃ ┃ ┣ 📜3.png
+ ┃ ┃ ┣ 📜4.png
+ ┃ ┃ ┣ 📜5.png
+ ┃ ┃ ┣ 📜8.png
+ ┃ ┃ ┣ 📜MainButton.png
+ ┃ ┃ ┣ 📜ResultBackground.png
+ ┃ ┃ ┗ 📜RollingPaper.png
+ ┃ ┣ 📜1.png
  ┃ ┣ 📜2.png
  ┃ ┣ 📜3.png
  ┃ ┣ 📜4.png
  ┃ ┣ 📜5.png
- ┃ ┣ 📜All.js 
- ┃ ┣ 📜Delete.js
- ┃ ┣ 📜Home.js
- ┃ ┣ 📜index.js
- ┃ ┣ 📜KAKAOButton.js
- ┃ ┣ 📜Like.js
- ┃ ┣ 📜Login.js
- ┃ ┣ 📜Mainhome.js
- ┃ ┣ 📜Memo.css
- ┃ ┣ 📜Memo.js
- ┃ ┣ 📜post.png
- ┃ ┣ 📜PublicUp.js
- ┃ ┣ 📜Result.js
- ┃ ┣ 📜Roll.js
- ┃ ┣ 📜Signup.js
- ┃ ┣ 📜ToastMessage.js
- ┃ ┗ 📜WriteMemo.js
+ ┃ ┣ 📜All.js          # 전체 게시판
+ ┃ ┣ 📜Delete.js       # 포스트지 삭제 팝업
+ ┃ ┣ 📜Home.js         # 사이트 소개 
+ ┃ ┣ 📜index.js        # export 관리 
+ ┃ ┣ 📜KAKAOButton.js  # 카카오톡 공유 버튼
+ ┃ ┣ 📜Like.js         
+ ┃ ┣ 📜Login.js        # 로그인 화면
+ ┃ ┣ 📜Mainhome.js     # 메인 화면
+ ┃ ┣ 📜Memo.css        # 전체 CSS
+ ┃ ┣ 📜Memo.js         # 포스트지 컴포넌트
+ ┃ ┣ 📜post.png        
+ ┃ ┣ 📜PublicUp.js   
+ ┃ ┣ 📜Result.js       # 결과 화면
+ ┃ ┣ 📜Roll.js         # 롤링 페이퍼 화면
+ ┃ ┣ 📜Signup.js       # 회원가입 
+ ┃ ┣ 📜ToastMessage.js # 토스트 메시지
+ ┃ ┗ 📜WriteMemo.js    # 포스트 작성 팝업
  ┣ 📜App.css
- ┣ 📜App.js
+ ┣ 📜App.js            
  ┣ 📜App.test.js
  ┣ 📜AuthContext.js
  ┣ 📜index.css
