@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# Image Teller
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MadCamp Week3 1분반 
 
-## Available Scripts
+- 사용자들끼리 서로의 롤링 페이퍼에 그 사람에 대한 인상을 적을 수 있습니다.
+- 롤링 페이퍼에 붙은 다른 사람들의 의견들을 종합하여 어울리는 이미지를 찾아줍니다.
 
-In the project directory, you can run:
+### a. 개발 팀원
 
-### `npm start`
+- 김수환 - KAIST 전산학부(수리과학과) 22학번
+- 정민서 - 숙명여자대학교 컴퓨터과학과 22학번
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### b. 개발환경
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Language: JavaScript, HTML, CSS
+- Front-end: React
+- Server: Node.js
+- DataBase: MySQL
+- IDE: Visual Studio code 
 
-### `npm test`
+### c. DB ERD
+사진...
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### d. WEB
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Page 0 - HOME/LOGIN/SIGNUP
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/4d24bbfb-574d-4235-ba11-6e85ceb708c6">
+<img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/5d4ffb5b-33b8-4e4a-bc5f-aa8fd6a57c24">
+<img width="961" alt="chrome_lsHOMcIDNq" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/cec49610-2a55-48eb-87ac-ca0bb290c3f3">
+<img width="961" alt="chrome_Q9kJv5QydW" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/3e73e47f-961c-4308-a99b-c1839e997b86">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+***Major features***
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- 웹 소개 페이지입니다. 스크롤하여 읽을 수 있습니다.
+- 로그인 버튼을 눌러 시작할 수 있습니다.
+- 로그인/회원가입 기능이 있습니다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Page 1 - MAIN
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img width="961" alt="chrome_bc8PhCOo4A" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/054a5dce-d914-4e96-a0e3-7b02439071b0">
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+***Major features***
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 전체 게시판과 롤링페이퍼 만들기 페이지로 가는 버튼이 있습니다.
+- 롤링 페이퍼는 한 번만 만들 수 있고, 만든 후에는 롤링 페이퍼 보기 버튼으로 바뀝니다.
+- 롤링 페이퍼 보기 버튼은 사용자의 롤링 페이퍼 화면으로 넘어갑니다.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Page 2 - BULLETIN
 
-### Analyzing the Bundle Size
+***Major features***
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- 사용자들이 만든 롤링 페이퍼들로 이동할 수 있습니다.
+- 각 게시물의 제목은 사용자의 닉네임과 게시물 번호로 구성되어 있습니다.
+    
 
-### Making a Progressive Web App
+## Page 3 - ROLLING PAPER
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img width="961" alt="chrome_ehvc6BZE4W" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/e1f63852-2186-4ceb-a4bf-a2a7674c61e6">
+<img width="961" alt="chrome_53BQiNAQom" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/0bc4bf21-2fe0-43db-85c7-6086a72264af">
 
-### Advanced Configuration
+***Major features***
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- 해당 페이지는 결과 보기, 메모 쓰기, 메인으로 돌아가기, 카카오톡으로 공유하기 기능이 있습니다.
+  
+- 메모 쓰기 버튼을 누르면 팝업으로 메모를 작성할 수 있는 창이 뜨고, 80자로 글자가 제한되어 있습니다.
+- 메모 작성을 완료하면 화면에 메모가 추가됩니다.
+- 메모를 클릭하면 메모 작성자만 메로를 삭제할 수 있는 팝업이 뜹니다.
 
-### Deployment
+- 결과 보기 버튼을 누르면 롤링 페이퍼의 모든 포스트 내용을 네이버 클로바 API를 이용해서 요약합니다.
+- 요약한 정보를 결과 보기 페이지로 전달합니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- 카카오톡으로 공유하기 버튼은 카카오톡 API를 사용하여 해당 롤링 페이퍼의 URL을 공유합니다.
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Page 4 - RESULT
+
+<img width="961" alt="chrome_kLIOHzu7jD" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/c5ee85e3-68a1-4697-9234-1559a2457f10">
+<img width="961" alt="chrome_KBHM5sbURT" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/ebd977c7-94af-49f0-b69a-bb5b3214042f">
+
+***Major features***
+
+- 처음 결과 페이지에 들어가면 물음표 이미지와 롤링 페이퍼의 요약된 내용이 출력됩니다.
+- 사진으로 확인하기 버튼을 누르면 형태소 분석 API로 요약 문장에서 명사들을 추출합니다.
+- 해당 명사들을 이용해서 pixabey 클로어 API를 통해 해당 단어에 알맞는 이미지를 가져와 물음표 이미지를 대체합니다.
+
+### e. DIRECTORY STRUCTURE
+```
+📦public
+ ┃ ┣ 📜favicon.ico
+ ┃ ┣ 📜index.html
+ ┃ ┣ 📜logo192.png
+ ┃ ┣ 📜logo512.png
+ ┃ ┣ 📜manifest.json
+ ┃ ┗ 📜robots.txt
+📦src
+ ┣ 📂components
+ ┃ ┣ 📜1.png 
+ ┃ ┣ 📜2.png
+ ┃ ┣ 📜3.png
+ ┃ ┣ 📜4.png
+ ┃ ┣ 📜5.png
+ ┃ ┣ 📜All.js 
+ ┃ ┣ 📜Delete.js
+ ┃ ┣ 📜Home.js
+ ┃ ┣ 📜index.js
+ ┃ ┣ 📜KAKAOButton.js
+ ┃ ┣ 📜Like.js
+ ┃ ┣ 📜Login.js
+ ┃ ┣ 📜Mainhome.js
+ ┃ ┣ 📜Memo.css
+ ┃ ┣ 📜Memo.js
+ ┃ ┣ 📜post.png
+ ┃ ┣ 📜PublicUp.js
+ ┃ ┣ 📜Result.js
+ ┃ ┣ 📜Roll.js
+ ┃ ┣ 📜Signup.js
+ ┃ ┣ 📜ToastMessage.js
+ ┃ ┗ 📜WriteMemo.js
+ ┣ 📜App.css
+ ┣ 📜App.js
+ ┣ 📜App.test.js
+ ┣ 📜AuthContext.js
+ ┣ 📜index.css
+ ┣ 📜index.js
+ ┣ 📜logo.svg
+ ┣ 📜reportWebVitals.js
+ ┗ 📜setupTests.js
+```
+
+  
+
