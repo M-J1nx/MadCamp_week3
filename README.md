@@ -27,7 +27,7 @@ MadCamp Week3 1분반
 ## Page 0 - HOME/LOGIN/SIGNUP
 
 <img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/4d24bbfb-574d-4235-ba11-6e85ceb708c6">
-![chrome_2Xm6EgGcRg](https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/4f114003-c8b9-461c-9fb5-addb7300e39b)
+<img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/5d4ffb5b-33b8-4e4a-bc5f-aa8fd6a57c24">
 <img width="961" alt="chrome_lsHOMcIDNq" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/cec49610-2a55-48eb-87ac-ca0bb290c3f3">
 <img width="961" alt="chrome_Q9kJv5QydW" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/3e73e47f-961c-4308-a99b-c1839e997b86">
 
@@ -41,7 +41,8 @@ MadCamp Week3 1분반
 
 ## Page 1 - MAIN
 
-사진...
+<img width="961" alt="chrome_bc8PhCOo4A" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/054a5dce-d914-4e96-a0e3-7b02439071b0">
+
 
 ***Major features***
 
@@ -60,6 +61,9 @@ MadCamp Week3 1분반
 
 ## Page 3 - ROLLING PAPER
 
+<img width="961" alt="chrome_ehvc6BZE4W" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/e1f63852-2186-4ceb-a4bf-a2a7674c61e6">
+<img width="961" alt="chrome_53BQiNAQom" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/0bc4bf21-2fe0-43db-85c7-6086a72264af">
+
 ***Major features***
 
 - 해당 페이지는 결과 보기, 메모 쓰기, 메인으로 돌아가기, 카카오톡으로 공유하기 기능이 있습니다.
@@ -75,6 +79,9 @@ MadCamp Week3 1분반
 
 
 ## Page 4 - RESULT
+
+<img width="961" alt="chrome_kLIOHzu7jD" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/c5ee85e3-68a1-4697-9234-1559a2457f10">
+<img width="961" alt="chrome_KBHM5sbURT" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/ebd977c7-94af-49f0-b69a-bb5b3214042f">
 
 ***Major features***
 
