@@ -19,8 +19,8 @@ MadCamp Week3 1분반
 - IDE: Visual Studio code 
 
 ### c. DB ERD
-사진...
 
+<img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/3ea549ed-1782-4619-b9e6-6d2c1fe76825">
 
 ### d. WEB
 
