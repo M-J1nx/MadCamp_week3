@@ -40,14 +40,14 @@ export default function Mainhome() {
             })
     }
     return (
-
         //hasroll이 지금 세션에 저장되어 있는데 이게 true면 롤페 만들기가 아니라 롤페 보기로 버튼이 바꾸게 나중에 설정해야함..
         //이거 롤페 만들어지는 순간 이거가 게시판에서 넘어올 수 있게 게시글 형식으로 우선 해보자..
-        <div className='login'>
-            <div className='loginitem'>
-                <button style={{marginRight: "12px"}} className='btn' onClick={()=>{window.location.href = "/all"}}>전체 게시판</button>
+        <div>
+            <div className="home1" />
+            <div className="MainButton">
+                <button className='entireBtn' onClick={()=>{window.location.href = "/all"}}>전체 게시판</button>
                 {/*<button style={{marginRight: "12px"}} className='btn' onClick={()=>{window.location.href = "/like"}}>좋아요 게시판</button>*/}
-                <button className='btn' onClick={hasRoll ? () => {window.location.href=`/roll/${pid}`} : handleRoll}>
+                <button className='rollBtn' onClick={hasRoll ? () => {window.location.href=`/roll/${pid}`} : handleRoll}>
                     {hasRoll ? "롤링페이퍼 보기" : "나의 롤링페이퍼 만들기"}
                 </button>
             </div>

@@ -27,7 +27,7 @@ const KAKAOButton = (props) => {
 
     return (
         <div>
-            <button className='btn' id="kakao-link-btn" onClick={createKAKAOButton}>
+            <button className='Kakaobtn' id="kakao-link-btn" onClick={createKAKAOButton}>
                 카카오톡으로 공유하기
             </button>
         </div>

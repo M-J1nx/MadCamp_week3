@@ -43,7 +43,7 @@ export default function Result() {
     
         const wordsArray = resultArray.filter(item => item.includes("/NNG")).map(item => item.split("/")[0]);
         const rstt = wordsArray[Math.floor(Math.random() * wordsArray.length)]
-        console.log(wordsArray)
+        
         setPart(rstt) 
       };
 
@@ -62,6 +62,7 @@ export default function Result() {
         const {data} = response.data
         const {hits} = data
         const {largeImageURL} = hits[0]
+        console.log(largeImageURL) 
         setimgurl(largeImageURL)
           
       };
@@ -71,27 +72,21 @@ export default function Result() {
     
 
     return (
-        <div className="login">
-            <div className='loginitem'>
-                <h2 style={{textAlign: "center"}}>{nick}의 이미지는?</h2>
-                
-                <div style={{textAlign: "center"}}>
-                    <img style={{width: "20vw", height: "20vw"}} src={imgurl} alt="웹 이미지"></img>
-                </div>
-                <p style={{width: "80vw", textAlign: "center"}}>{key}</p>
-                <p style={{textAlign: "center"}}>
+        <div>
+            <div className="home1" />
+            <div className='resultItem'>
+                <div style={{textAlign: "center", position: "absolute",fontFamily: "PuradakGentleGothicR", fontSize: "30px"}}>{nick}님의 이미지는?</div>
+                <img style={{width: "20vw", height: "20vw" , paddingTop:"25%", position: "absolute"}} src={imgurl} alt="웹 이미지"></img>
+                <p style={{width: "80vw", textAlign: "center",fontFamily: "SOGANGUNIVERSITYTTF", fontSize: "15px", paddingTop:"53%", position: "absolute"}}>[ 남들의 보는 나의 이미지 한 줄 요약] </p>
+                <p style={{width: "80vw", textAlign: "center",fontFamily: "SOGANGUNIVERSITYTTF", fontSize: "20px", paddingTop:"57%", position: "absolute"}}>{key}</p>
+                <p style={{textAlign: "center" ,paddingTop:"70%", position: "absolute"}}>
                     <button style={{marginRight: "10px"}} className='btn' onClick={()=>{
                         window.location.href=`/roll/${idx}`
                     }}>돌아가기</button>
 
                     <button className='btn' onClick={handlePart}>사진으로 확인하기</button>
                 </p>
-                
-                
-
-                
             </div>
-
         </div>
     );
 }

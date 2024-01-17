@@ -64,7 +64,7 @@ function Login() {
               setPassword(event.target.value);
             }} /></p>
 
-            <p><button style={{marginRight: "12px"}} className="btn" onClick={() => {
+            <p  className='LoginBox'><button style={{height: "10%",  marginRight: "10px",flex: 1}} className="btn" onClick={() => {
               {/* 통신 부분... */}
               {/* 밑에 이동하는 코드는 로그인이 성공했을 때만 이동하게 나중에 수정해야 함... */}
               {/* 비번 틀리면 토스트 하는 거?  */}
@@ -90,10 +90,10 @@ function Login() {
                 })
                 
                 }}>로그인</button>
-                <button style={{marginRight: "12px"}} className="btn" onClick={() => {
+                <button style={{height: "10%", marginRight: "10px", flex: 1}} className="btn" onClick={() => {
             window.location.href = "/sign"
           }}>계정 만들기</button>
-          <button style={{marginRight: "12px"}} className="btn" onClick={()=>{window.location.href="/"}}>홈 화면 가기</button></p>
+          <button style={{height: "10%", flex: 1}} className="btn" onClick={()=>{window.location.href="/"}}>홈 화면 가기</button></p>
           </div>
 
           

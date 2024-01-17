@@ -91,28 +91,27 @@ export default function Roll() {
         </Helmet>
         <div>
         
-          <div style={{padding: "20px", textAlign: "center"}}>
-            <h2 style={{marginTop: 0}}>{nickname}의 롤링페이퍼</h2>
-          </div>
-          <div style={{marginLeft: "10vw", marginRight: "10vw",paddingRight: "20px"}} className='wrapper grid'>
-            {lst.map((post)=>(
-            <Memo postTitle = {post.userName} postDetail = {post.body} postId = {post.postId} />
-            ))}
+          <div style={{paddingTop: "5%", textAlign: "center"}}>
+            <h2 style={{marginTop: 0, fontFamily: "PuradakGentleGothicR", fontSize: "25px"}}>{nickname}님의 롤링페이퍼</h2>
           </div>
 
-          <div style={{textAlign: "center"}}>
-            <button style={{marginBottom: "20px", marginRight: "10px"}} className='btn' onClick={()=>{
-              handleGetData()
-              
-              
+          <div style={{paddingTop: "2%",textAlign: "center"}}>
+            <button style={{marginBottom: "20px", marginRight: "10px", fontFamily: "GyeonggiBatang"}} className='whitebtn' onClick={()=>{
+              handleGetData()              
             }}>결과 보기</button> {/* 이거가 요약 해주는 버튼... */}
-            <button style={{marginBottom: "20px", marginRight: "10px"}} className='btn' onClick={()=>{setispopup(true)}}>메모 쓰기</button>
-            <button className='btn' onClick={()=>{window.location.href="/mainhome"}}>메인으로 돌아가기</button>
+            <button style={{marginBottom: "20px", marginRight: "10px", fontFamily: "GyeonggiBatang"}} className='whitebtn' onClick={()=>{setispopup(true)}}>메모 쓰기</button>
+            <button style={{marginBottom: "20px", marginRight: "10px", fontFamily: "GyeonggiBatang"}} className='whitebtn' onClick={()=>{window.location.href="/mainhome"}}>메인으로 돌아가기</button>
             <KAKAOButton txt={`http://localhost:3000/roll/${idx}`}/>
             <WriteMemo isOpen={ispopup} onClose={()=>setispopup(false)} paperId={idx}/>
             
             
 
+          </div>
+          
+          <div style={{marginLeft: "10vw", marginRight: "10vw",paddingRight: "20px"}} className='wrapper grid'>
+            {lst.map((post)=>(
+            <Memo postTitle = {post.userName} postDetail = {post.body} postId = {post.postId} />
+            ))}
           </div>
         </div>
       </div>
