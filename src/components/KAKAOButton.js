@@ -3,7 +3,7 @@ import './Memo.css';
 const KAKAOButton = (props) => {
     const createKAKAOButton = () => {
         if(window.Kakao) {
-            console.log("?")
+            
             const kakao = window.Kakao
             
         
