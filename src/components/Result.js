@@ -43,7 +43,7 @@ export default function Result() {
     
         const wordsArray = resultArray.filter(item => item.includes("/NNG")).map(item => item.split("/")[0]);
         const rstt = wordsArray[Math.floor(Math.random() * wordsArray.length)]
-        
+        console.log(wordsArray)
         setPart(rstt) 
       };
 
@@ -62,7 +62,6 @@ export default function Result() {
         const {data} = response.data
         const {hits} = data
         const {largeImageURL} = hits[0]
-        console.log(largeImageURL) 
         setimgurl(largeImageURL)
           
       };
