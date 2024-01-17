@@ -26,7 +26,11 @@ MadCamp Week3 1분반
 
 ## Page 0 - HOME/LOGIN/SIGNUP
 
-사진...
+<img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/4d24bbfb-574d-4235-ba11-6e85ceb708c6">
+![chrome_2Xm6EgGcRg](https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/4f114003-c8b9-461c-9fb5-addb7300e39b)
+<img width="961" alt="chrome_lsHOMcIDNq" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/cec49610-2a55-48eb-87ac-ca0bb290c3f3">
+<img width="961" alt="chrome_Q9kJv5QydW" src="https://github.com/M-J1nx/MadCamp_week3_front/assets/155048947/3e73e47f-961c-4308-a99b-c1839e997b86">
+
 
 ***Major features***
 
