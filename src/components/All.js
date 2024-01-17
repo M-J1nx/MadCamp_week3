@@ -16,18 +16,18 @@ export default function All() {
     getlst();
   });
     return (
-      
-      <div className='login'>
+      <div style={{ position: "relative", height: "100vh" }}>
+        <div className="home1" />
         <div className='bulletin'>
-          <h1>전체 게시판</h1>
-          <div style = {{width: "50vw", height: "75vh", border: "1px solid #eadcd7", padding: "20px", backgroundColor: "#eadcd7"}}>
+          <div style={{textAlign: "center", position: "absolute",fontFamily: "PuradakGentleGothicR", fontSize: "3em"}}>전체 게시판</div>
+          <div style = {{width: "50vw", position: "absolute",border: "1px solid #eadcd7", padding: "20px", marginTop: "8%",backgroundColor: "#eadcd7"}}>
+              
             {lst.map((paper)=>(
-              <li style={{marginBottom: "10px", borderBottom: "1px solid black"}} key={paper.paperId}>
-                <Link to={`/roll/${paper.paperId}`} style={{ textDecoration: "none", color: "black"}}>{paper.paperId}: {paper.userName}의 게시물</Link>
+              <li style={{marginBottom: "20px"}} key={paper.paperId}>
+                <Link to={`/roll/${paper.paperId}`} style={{ textDecoration: "none", color: "black", fontFamily: "GyeonggiBatang", fontSize: "1.3em"}}>{paper.userName}의 롤링 페이퍼</Link>
               </li>
             ))}
 
-            
           </div>
           
         </div>

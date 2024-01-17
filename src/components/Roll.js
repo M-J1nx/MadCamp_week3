@@ -103,9 +103,6 @@ export default function Roll() {
             <button style={{marginBottom: "20px", marginRight: "10px", fontFamily: "GyeonggiBatang"}} className='whitebtn' onClick={()=>{window.location.href="/mainhome"}}>메인으로 돌아가기</button>
             <KAKAOButton txt={`http://localhost:3000/roll/${idx}`}/>
             <WriteMemo isOpen={ispopup} onClose={()=>setispopup(false)} paperId={idx}/>
-            
-            
-
           </div>
           
           <div style={{marginLeft: "10vw", marginRight: "10vw",paddingRight: "20px"}} className='wrapper grid'>
