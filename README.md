@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Image Teller
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MadCamp Week3 1분반 
 
-## Available Scripts
+- 사용자들끼리 서로의 롤링 페이퍼에 그 사람에 대한 인상을 적을 수 있습니다.
+- 롤링 페이퍼에 붙은 다른 사람들의 의견들을 종합하여 어울리는 이미지를 찾아줍니다.
 
-In the project directory, you can run:
+### a. 개발 팀원
 
-### `npm start`
+- 김수환 - KAIST 전산학부(수리과학과) 22학번
+- 정민서 - 숙명여자대학교 컴퓨터과학과 22학번
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### b. 개발환경
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Language: JavaScript, HTML, CSS
+- Front-end: React
+- Server: Node.js
+- DataBase: MySQL
+- IDE: Visual Studio code 
 
-### `npm test`
+### c. DB ERD
+사진...
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### d. WEB
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Page 0 - HOME/LOGIN/SIGNUP
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+사진...
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+***Major features***
 
-### `npm run eject`
+- 웹 소개 페이지입니다. 스크롤하여 읽을 수 있습니다.
+- 로그인 버튼을 눌러 시작할 수 있습니다.
+- 로그인/회원가입 기능이 있습니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Page 1 - MAIN
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+사진...
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+***Major features***
 
-## Learn More
+- 전체 게시판과 롤링페이퍼 만들기 페이지로 가는 버튼이 있습니다.
+- 롤링 페이퍼는 한 번만 만들 수 있고, 만든 후에는 롤링 페이퍼 보기 버튼으로 바뀝니다.
+- 롤링 페이퍼 보기 버튼은 사용자의 롤링 페이퍼 화면으로 넘어갑니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Page 2 - BULLETIN
 
-### Code Splitting
+***Major features***
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- 사용자들이 만든 롤링 페이퍼들로 이동할 수 있습니다.
+- 각 게시물의 제목은 사용자의 닉네임과 게시물 번호로 구성되어 있습니다.
+    
 
-### Analyzing the Bundle Size
+## Page 3 - ROLLING PAPER
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+***Major features***
 
-### Making a Progressive Web App
+- 해당 페이지는 결과 보기, 메모 쓰기, 메인으로 돌아가기, 카카오톡으로 공유하기 기능이 있습니다.
+  
+- 메모 쓰기 버튼을 누르면 팝업으로 메모를 작성할 수 있는 창이 뜨고, 80자로 글자가 제한되어 있습니다.
+- 메모 작성을 완료하면 화면에 메모가 추가됩니다.
+- 메모를 클릭하면 메모 작성자만 메로를 삭제할 수 있는 팝업이 뜹니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- 결과 보기 버튼을 누르면 롤링 페이퍼의 모든 포스트 내용을 네이버 클로바 API를 이용해서 요약합니다.
+- 요약한 정보를 결과 보기 페이지로 전달합니다.
 
-### Advanced Configuration
+- 카카오톡으로 공유하기 버튼은 카카오톡 API를 사용하여 해당 롤링 페이퍼의 URL을 공유합니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Page 4 - RESULT
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+***Major features***
 
-### `npm run build` fails to minify
+- 처음 결과 페이지에 들어가면 물음표 이미지와 롤링 페이퍼의 요약된 내용이 출력됩니다.
+- 사진으로 확인하기 버튼을 누르면 형태소 분석 API로 요약 문장에서 명사들을 추출합니다.
+- 해당 명사들을 이용해서 pixabey 클로어 API를 통해 해당 단어에 알맞는 이미지를 가져와 물음표 이미지를 대체합니다.
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
