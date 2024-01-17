@@ -4,7 +4,6 @@ import './Memo.css'
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import WriteMemo from './WriteMemo';
-import { ToastMessage } from "./ToastMessage";
 import {Helmet} from "react-helmet"
 import KAKAOButton from './KAKAOButton';
 
