@@ -13,16 +13,7 @@ import KAKAOButton from './KAKAOButton';
 export default function Roll() {
   const {idx} = useParams();//이거가 인덱스(paperid 가져오는 거...)
   const navigate = useNavigate();
-  const [downloadToast, setDownloadToast] = useState(false);
-    function activeToast() {
-      setDownloadToast(true);
-      let timer = setTimeout(() => {
-        setDownloadToast(false);
-      }, 2000);
-      return () => {
-        clearTimeout(timer);
-      };
-    }
+  
   
   const [lst, setlst] = useState([]);
   const getlst = async () => {
@@ -64,13 +55,12 @@ export default function Roll() {
       console.error('Error fetching data:', error);
     }
   };
-/////////////////////////////////////////////////내용 부족하거나 이상하면 에러남. api 서버에서.
+
   useEffect(()=>{
     if (postData != ''){
       console.log(postData)
-      handlesum()
-      
-      
+      handlesum() 
+      setPostData("")
     }
     
   }, [postData])
@@ -84,7 +74,8 @@ export default function Roll() {
       navigate(`/roll/${idx}/result`, {state: {rst: finalresult, nick: nickname}})
 
     } catch (error) {
-      activeToast()///////////////
+      alert("포스트가 부족합니다.")
+
     }
   }
 
@@ -119,10 +110,8 @@ export default function Roll() {
             <button style={{marginBottom: "20px", marginRight: "10px"}} className='btn' onClick={()=>{setispopup(true)}}>메모 쓰기</button>
             <button className='btn' onClick={()=>{window.location.href="/mainhome"}}>메인으로 돌아가기</button>
             <KAKAOButton txt={`http://localhost:3000/roll/${idx}`}/>
-            
-            
             <WriteMemo isOpen={ispopup} onClose={()=>setispopup(false)} paperId={idx}/>
-            {downloadToast && <ToastMessage text={"아이디/비번이 다릅니다."} />}
+            
             
 
           </div>
